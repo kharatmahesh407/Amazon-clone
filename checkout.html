@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - Amazon Clone</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/logos/amazon_logo.png"
+     >    
+   
+    
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="nav-logo">
+
+                <a href="index.html">
+
+                    <img
+                        src="assets/logos/amazon_logo.png"
+                        alt="Amazon Logo"
+                    >
+
+                </a>
+
+            </div>
+
+            <h2 class="checkout-title">
+                Checkout
+            </h2>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CHECKOUT -->
+
+    <main class="checkout-page">
+
+        <!-- LEFT SIDE -->
+
+        <div class="checkout-left">
+
+
+            <!-- =========================
+                 ADDRESS
+            ========================== -->
+
+            <section class="checkout-box">
+
+                <h2>
+                    1. Delivery Address
+                </h2>
+
+                               <button
+                                    type="button"
+                                    class="location-btn"
+                                    id="current-location-btn"
+                                >
+                                    📍 Use My Current Location
+                                </button>
+
+                                <p id="location-status"></p>
+
+                                <a
+                                    href="#"
+                                    id="map-link"
+                                    target="_blank"
+                                    style="display:none;"
+                                >
+                                    🗺️ Open Location on Map
+                                </a>
+
+                <!-- SAVED ADDRESS -->
+
+                <div
+                    class="address"
+                    id="saved-address"
+                >
+
+                    <strong>
+                        Delivery Address
+                    </strong>
+
+                    <p id="address-display">
+                        No address added yet.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="change-btn"
+                    id="change-address-btn"
+                >
+                    Add / Change Address
+                </button>
+
+
+                <!-- ADDRESS FORM -->
+
+                <div
+                    class="address-form"
+                    id="address-form"
+                    style="display: none;"
+                >
+
+                    <h3>
+                        Enter Delivery Address
+                    </h3>
+
+
+                    <label for="address-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="address-name"
+                        placeholder="Enter your full name"
+                    >
+
+
+                    <label for="address-mobile">
+                        Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="address-mobile"
+                        placeholder="Enter mobile number"
+                        maxlength="10"
+                    >
+
+                        <label for="address-area">
+                            Area
+                        </label>
+
+                        <input
+                            type="text"
+                            id="address-area"
+                            placeholder="Enter area"
+                        >
+
+
+                        <label for="address-house">
+                            Street / House / Flat
+                        </label>
+
+                        <input
+                            type="text"
+                            id="address-house"
+                            placeholder="Enter street, house or flat"
+                        >
+
+
+                        <label for="address-pincode">
+                            PIN Code
+                        </label>
+
+                        <input
+                            type="text"
+                            id="address-pincode"
+                            placeholder="Enter PIN code"
+                            maxlength="6"
+                        >
+   
+
+                    <label for="address-city">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="address-city"
+                        placeholder="City"
+                    >
+
+
+                    <label for="address-state">
+                        State
+                    </label>
+
+                    <input
+                        type="text"
+                        id="address-state"
+                        placeholder="State"
+                    >
+
+
+                    <div class="address-buttons">
+
+                        <button
+                            type="button"
+                            class="save-address-btn"
+                            id="save-address-btn"
+                        >
+                            Save Address
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="cancel-address-btn"
+                            id="cancel-address-btn"
+                        >
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 PAYMENT
+            ========================== -->
+
+            <section class="checkout-box">
+
+                <h2>
+                    2. Payment Method
+                </h2>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="cod"
+                        checked
+                    >
+
+                    Cash on Delivery
+
+                </label>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="upi"
+                    >
+
+                    UPI
+
+                </label>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="card"
+                    >
+
+                    Credit / Debit Card
+
+                </label>
+
+            </section>
+
+
+            <!-- =========================
+                 ORDER
+            ========================== -->
+
+            <section class="checkout-box">
+
+                <h2>
+                    3. Review Your Order
+                </h2>
+
+                <div id="checkout-items">
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =========================
+             RIGHT SIDE
+        ========================== -->
+
+        <aside class="checkout-summary">
+
+            <h2>
+                Order Summary
+            </h2>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Items:
+                </span>
+
+                <span id="summary-items">
+                    0
+                </span>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Delivery:
+                </span>
+
+                <span>
+                    FREE
+                </span>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="summary-total">
+
+                <span>
+                    Order Total:
+                </span>
+
+                <strong id="summary-total">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="place-order-btn"
+                id="place-order"
+            >
+                Place Your Order
+            </button>
+
+        </aside>
+
+    </main>
+
+
+    <script src="js/product.js"></script>
+    <script src="js/checkout.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account - Amazon Clone</title>
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/logos/amazon_logo.png"
+    >
+
+
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+
+    <div class="signup-page">
+
+        <div class="signup-logo">
+
+            <a href="index.html">
+                <img
+                    src="assets/logos/amazon_logo.png"
+                    alt="Amazon Logo"
+                >
+            </a>
+
+        </div>
+
+
+        <div class="signup-box">
+
+            <h1>Create account</h1>
+
+
+            <form id="signup-form">
+
+                <label for="name">
+                    Your name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="First and last name"
+                    required
+                >
+
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="At least 6 characters"
+                    minlength="6"
+                    required
+                >
+
+
+                <label for="confirm-password">
+                    Re-enter password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirm-password"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="signup-btn"
+                >
+                    Create your Amazon Clone account
+                </button>
+
+            </form>
+
+
+            <p class="login-text">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Sign in
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/signup.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+                   <title>Amazon Clone</title>
+    
+                    <link
+                        rel="icon"
+                        type="image/png"
+                        href="assets/logos/amazon_logo.png"
+                    >
+     
+
+                   
+
+    <!-- ========================= -->
+    <!-- CSS FILES -->
+    <!-- ========================= -->
+
+    <link
+        rel="stylesheet"
+        href="css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/hero.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/product.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/footer.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================= -->
+    <!-- NAVBAR -->
+    <!-- ========================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- ========================= -->
+            <!-- LOGO -->
+            <!-- ========================= -->
+
+            <div class="nav-logo">
+
+                <a href="index.html">
+
+                    <img
+                        src="assets/logos/amazon_logo.png"
+                        alt="Amazon Logo"
+                    >
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ========================= -->
+            <!-- LOCATION -->
+            <!-- ========================= -->
+
+            <a
+                href="#"
+                class="nav-location"
+                id="location-btn"
+            >
+
+                <div class="location-icon">
+                    📍
+                </div>
+
+
+                <div class="location-text">
+
+                    <span class="location-small">
+                        Delivering to Pune 411001
+                    </span>
+
+                    <span class="location-main">
+                        Update location
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+                                    <!-- ========================= -->
+                                    <!-- SEARCH -->
+                                    <!-- ========================= -->
+                                                <div class="nav-search">
+
+                                                    <select class="search-category">
+                                                        <option>All</option>
+                                                        <option>Mobiles</option>
+                                                        <option>Laptops</option>
+                                                        <option>Electronics</option>
+                                                        <option>Fashion</option>
+                                                    </select>
+
+                                                    <div class="search-wrapper">
+
+                                                        <input
+                                                            type="text"
+                                                            id="search-input"
+                                                            class="search-input"
+                                                            placeholder="Search Amazon.in"
+                                                            autocomplete="off"
+                                                        >
+
+                                                        <div
+                                                            id="search-suggestions"
+                                                            class="search-suggestions"
+                                                        ></div>
+
+                                                    </div>
+
+                                                    <button
+                                                        type="button"
+                                                        class="search-btn"
+                                                        id="search-btn"
+                                                    >
+                                                        🔍
+                                                    </button>
+
+                                                </div>
+                                                 <!-- ========================= -->
+                                                <!-- ACCOUNT -->
+                                                <!-- ========================= -->
+
+                                                <a
+                                                    href="login.html"
+                                                    class="nav-account"
+                                                    id="user-link"
+                                                >
+
+                                                    <span class="account-small">
+                                                        Hello, sign in
+                                                    </span>
+
+                                                    <span class="account-main">
+
+                                                        Account & Lists
+
+                                                        <span class="nav-arrow">
+                                                            ▼
+                                                        </span>
+
+                                                    </span>
+
+                                                </a>
+
+            <!-- ========================= -->
+            <!-- ORDERS -->
+            <!-- ========================= -->
+
+            <a
+                href="orders.html"
+                class="nav-orders"
+            >
+
+                <span class="orders-small">
+                    Returns
+                </span>
+
+                <span class="orders-main">
+                    & Orders
+                </span>
+
+            </a>
+
+
+
+            <!-- ========================= -->
+            <!-- CART -->
+            <!-- ========================= -->
+
+            <a
+                href="cart.html"
+                class="nav-cart"
+            >
+
+                <span class="cart-icon">
+                    🛒
+                </span>
+
+                <span
+                    class="cart-count"
+                    id="cart-count"
+                >
+                    0
+                </span>
+
+                <span class="cart-text">
+                    Cart
+                </span>
+
+            </a>
+
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ========================= -->
+    <!-- HERO BANNER -->
+    <!-- ========================= -->
+
+    <section class="hero">
+
+
+        <button
+            class="hero-btn hero-prev"
+            id="prevBtn"
+            type="button"
+        >
+
+            ❮
+
+        </button>
+
+
+
+        <img
+            id="hero-image"
+            src="assets/images/banner1.jpg"
+            alt="Festival Sale Banner"
+        >
+
+
+
+        <button
+            class="hero-btn hero-next"
+            id="nextBtn"
+            type="button"
+        >
+
+            ❯
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- PRODUCTS -->
+    <!-- ========================= -->
+
+    <section class="product">
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script src="js/product.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script src="js/hero.js"></script>
+
+    <script src="js/search.js"></script>
+                
+
+
+                    <!-- ============================== -->
+                    <!-- FOOTER -->
+                    <!-- ============================== -->
+
+                    <footer>
+
+
+                        <!-- ============================== -->
+                        <!-- PERSONALIZED RECOMMENDATIONS -->
+                        <!-- ============================== -->
+
+                        <div class="footer-signin">
+
+                            <h2>
+                                See personalized recommendations
+                            </h2>
+
+
+                            <a
+                                href="login.html"
+                                class="footer-signin-btn"
+                            >
+                                Sign in
+                            </a>
+
+
+                            <p>
+
+                                New customer?
+
+                                <a href="signup.html">
+                                    Start here.
+                                </a>
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- ============================== -->
+                        <!-- BACK TO TOP -->
+                        <!-- ============================== -->
+
+                        <a
+                            href="#"
+                            class="back-to-top"
+                        >
+                            Back to top
+                        </a>
+
+
+
+                        <!-- ============================== -->
+                        <!-- FOOTER LINKS -->
+                        <!-- ============================== -->
+
+                        <div class="footer-main">
+
+
+                            <!-- COLUMN 1 -->
+
+                            <div class="footer-column">
+
+                                <h3>
+                                    Get to Know Us
+                                </h3>
+
+                                <a href="#">
+                                    About Amazon
+                                </a>
+
+                                <a href="#">
+                                    Careers
+                                </a>
+
+                                <a href="#">
+                                    Press Releases
+                                </a>
+
+                                <a href="#">
+                                    Amazon Science
+                                </a>
+
+                            </div>
+
+
+
+                            <!-- COLUMN 2 -->
+
+                            <div class="footer-column">
+
+                                <h3>
+                                    Connect with Us
+                                </h3>
+
+                                <a href="#">
+                                    Facebook
+                                </a>
+
+                                <a href="#">
+                                    Twitter
+                                </a>
+
+                                <a href="#">
+                                    Instagram
+                                </a>
+
+                            </div>
+
+
+
+                            <!-- COLUMN 3 -->
+
+                            <div class="footer-column">
+
+                                <h3>
+                                    Make Money with Us
+                                </h3>
+
+                                <a href="#">
+                                    Sell on Amazon
+                                </a>
+
+                                <a href="#">
+                                    Sell under Amazon Accelerator
+                                </a>
+
+                                <a href="#">
+                                    Protect and Build Your Brand
+                                </a>
+
+                                <a href="#">
+                                    Amazon Global Selling
+                                </a>
+
+                                <a href="#">
+                                    Supply to Amazon
+                                </a>
+
+                                <a href="#">
+                                    Become an Affiliate
+                                </a>
+
+                                <a href="#">
+                                    Fulfilment by Amazon
+                                </a>
+
+                                <a href="#">
+                                    Advertise Your Products
+                                </a>
+
+                                <a href="#">
+                                    Amazon Pay on Merchants
+                                </a>
+
+                            </div>
+
+
+
+                            <!-- COLUMN 4 -->
+
+                            <div class="footer-column">
+
+                                <h3>
+                                    Let Us Help You
+                                </h3>
+
+                                <a href="#">
+                                    Your Account
+                                </a>
+
+                                <a href="orders.html">
+                                    Returns Centre
+                                </a>
+
+                                <a href="#">
+                                    Recalls and Product Safety Alerts
+                                </a>
+
+                                <a href="#">
+                                    100% Purchase Protection
+                                </a>
+
+                                <a href="#">
+                                    Amazon App Download
+                                </a>
+
+                                <a href="#">
+                                    Help
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ============================== -->
+                        <!-- FOOTER BOTTOM -->
+                        <!-- ============================== -->
+
+                        <div class="footer-bottom">
+
+                            <img
+                                src="assets/logos/amazon_logo.png"
+                                alt="Amazon Logo"
+                            >
+
+                            <p>
+                                © 2026 Amazon Clone
+                            </p>
+
+                            <p>
+                                This is a frontend practice project.
+                            </p>
+
+                        </div>
+
+
+                    </footer>
+
+</body>
+
+</html>

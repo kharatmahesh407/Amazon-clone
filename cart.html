@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart -  Amazon clone</title>
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/logos/amazon_logo.png"
+    >
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <!-- Logo -->
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/logos/amazon_logo.png" alt="Amazon Logo">
+                </a>
+            </div>
+
+            <!-- Cart Title -->
+            <h2 style="color:white; margin-left:20px;">
+                Shopping Cart
+            </h2>
+
+        </nav>
+    </header>
+
+      <main class="cart-page">
+
+            <div class="cart-container">
+
+            </div>
+
+            <div class="cart-summary">
+
+                <h2>
+                   Subtotal (<span id="total-items">0</span> items):
+                 </h2>
+
+                <h3 id="total-price">
+                    ₹0
+                </h3>
+
+                <p class="free-delivery">
+                    ✅ Your order is eligible for FREE Delivery.
+                </p>
+
+                <button
+                    class="buy-btn"
+                    onclick="window.location.href='checkout.html'"
+                >
+                    Proceed to Buy
+                </button>
+
+            </div>
+
+        </main>
+    
+    <script src="js/product.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

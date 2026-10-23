@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Product Details - Amazon Clone</title>
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/logos/amazon_logo.png"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/product-details.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- LOGO -->
+
+            <div class="nav-logo">
+
+                <a href="index.html">
+
+                    <img
+                        src="assets/logos/amazon_logo.png"
+                        alt="Amazon Logo"
+                    >
+
+                </a>
+
+            </div>
+
+
+
+            <!-- LOCATION -->
+
+            <div class="nav-location">
+
+                <div class="location-icon">
+                    📍
+                </div>
+
+                <div class="location-text">
+
+                    <span class="location-small">
+                        Delivering to Pune 411001
+                    </span>
+
+                    <span class="location-main">
+                        Update location
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SEARCH -->
+
+            <div class="nav-search">
+
+                <select class="search-category">
+
+                    <option>All</option>
+
+                    <option>Mobiles</option>
+
+                    <option>Laptops</option>
+
+                    <option>Electronics</option>
+
+                    <option>Fashion</option>
+
+                </select>
+
+
+                <div class="search-wrapper">
+
+                    <input
+                        type="text"
+                        id="search-input"
+                        class="search-input"
+                        placeholder="Search Amazon.in"
+                        autocomplete="off"
+                    >
+
+
+                    <div
+                        id="search-suggestions"
+                        class="search-suggestions"
+                    ></div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="search-btn"
+                    id="search-btn"
+                >
+                    🔍
+                </button>
+
+            </div>
+
+
+
+            <!-- LANGUAGE -->
+
+            <div class="nav-language">
+
+                <span class="india-flag">
+                    🇮🇳
+                </span>
+
+                <span>
+                    EN
+                </span>
+
+                <span class="language-arrow">
+                    ▼
+                </span>
+
+            </div>
+
+
+
+            <!-- ACCOUNT -->
+
+            <a
+                href="login.html"
+                class="nav-account"
+                id="user-link"
+            >
+
+                <span class="account-small">
+                    Hello, sign in
+                </span>
+
+                <span class="account-main">
+
+                    Account & Lists
+
+                    <span class="nav-arrow">
+                        ▼
+                    </span>
+
+                </span>
+
+            </a>
+
+
+
+            <!-- ORDERS -->
+
+            <a
+                href="orders.html"
+                class="nav-orders"
+            >
+
+                <span class="orders-small">
+                    Returns
+                </span>
+
+                <span class="orders-main">
+                    & Orders
+                </span>
+
+            </a>
+
+
+
+            <!-- CART -->
+
+            <a
+                href="cart.html"
+                class="nav-cart"
+            >
+
+                <span class="cart-icon">
+                    🛒
+                </span>
+
+                <span
+                    class="cart-count"
+                    id="cart-count"
+                >
+                    0
+                </span>
+
+                <span class="cart-text">
+                    Cart
+                </span>
+
+            </a>
+
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         PRODUCT DETAILS
+    ========================== -->
+
+    <main class="product-details">
+
+        <div id="product-details-container">
+
+            <!-- Product JavaScript
+                 will display product here -->
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/product.js"></script>
+
+    <script src="js/product-details.js"></script>
+
+    <script src="js/search.js"></script>
+
+
+</body>
+
+</html>

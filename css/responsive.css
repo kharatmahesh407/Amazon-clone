@@ -1,0 +1,143 @@
+/* =========================================================
+   RESPONSIVE PRODUCT GRID
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .product {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+
+    .card {
+        min-height: 380px;
+
+        padding: 17px;
+    }
+
+
+    .card img {
+        height: 210px;
+    }
+
+
+    .card h3 {
+        font-size: 17px;
+    }
+
+
+    .card p {
+        font-size: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .product {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 10px;
+    }
+
+
+    .card {
+        min-height: auto;
+
+        padding: 15px;
+
+        border-radius: 7px;
+    }
+
+
+    .card img {
+        height: 200px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .card h3 {
+        font-size: 17px;
+
+        line-height: 1.4;
+    }
+
+
+    .card p {
+        font-size: 19px;
+    }
+
+
+    .card span {
+        font-size: 14px;
+    }
+
+
+    .add-to-cart {
+        min-height: 42px;
+
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .product {
+        padding: 8px;
+
+        gap: 10px;
+    }
+
+
+    .card {
+        padding: 13px;
+    }
+
+
+    .card img {
+        height: 180px;
+    }
+
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+
+    .card p {
+        font-size: 18px;
+    }
+
+
+    .add-to-cart {
+        min-height: 40px;
+
+        padding: 9px;
+
+        font-size: 14px;
+    }
+
+}

@@ -1,0 +1,922 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    min-height: 68px;
+    width: 100%;
+
+    background: #131921;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 8px;
+    gap: 7px;
+
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+    z-index: 10000;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.nav-logo {
+    height: 62px;
+    width: 172px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid transparent;
+    border-radius: 2px;
+
+    flex-shrink: 0;
+
+    transition: border-color 0.15s ease;
+}
+
+.nav-logo:hover {
+    border-color: white;
+}
+
+.nav-logo a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo img {
+    width: 160px;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.nav-location {
+    height: 60px;
+    min-width: 245px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+    padding: 5px 10px;
+
+    cursor: pointer;
+
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid transparent;
+    border-radius: 2px;
+
+    flex-shrink: 0;
+
+    transition: border-color 0.15s ease;
+}
+
+.nav-location:hover {
+    border-color: white;
+}
+
+.location-icon {
+    font-size: 25px;
+    line-height: 1;
+}
+
+.location-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    line-height: 1.15;
+
+    min-width: 0;
+}
+
+.location-small {
+    display: block;
+
+    font-size: 13px;
+    color: #ddd;
+
+    white-space: nowrap;
+}
+
+.location-main {
+    display: block;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    color: white;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.nav-search {
+    height: 48px;
+
+    flex: 1;
+    min-width: 250px;
+    max-width: 1050px;
+
+    display: flex;
+
+    background: white;
+
+    border-radius: 7px;
+
+    position: relative;
+
+    overflow: visible;
+
+    transition:
+        box-shadow 0.15s ease,
+        outline 0.15s ease;
+}
+
+.nav-search:focus-within {
+    box-shadow: 0 0 0 3px rgba(255, 189, 105, 0.55);
+}
+
+
+/* =========================================================
+   SEARCH CATEGORY
+========================================================= */
+
+.search-category {
+    width: 72px;
+
+    border: none;
+    border-right: 1px solid #ddd;
+
+    border-radius: 7px 0 0 7px;
+
+    background: #f3f3f3;
+
+    padding: 0 10px;
+
+    font-size: 14px;
+    color: #555;
+
+    outline: none;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.search-category:hover {
+    background: #e6e6e6;
+}
+
+.search-category:focus {
+    background: #e6e6e6;
+}
+
+
+/* =========================================================
+   SEARCH WRAPPER
+========================================================= */
+
+.search-wrapper {
+    position: relative;
+
+    flex: 1;
+
+    height: 48px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.search-input {
+    width: 100%;
+    height: 48px;
+
+    border: none;
+
+    padding: 0 15px;
+
+    font-size: 17px;
+
+    outline: none;
+
+    color: #111;
+
+    background: white;
+}
+
+.search-input::placeholder {
+    color: #777;
+}
+
+.search-input:focus {
+    color: #111;
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
+.search-btn {
+    width: 65px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 0 7px 7px 0;
+
+    background: #febd69;
+
+    color: #111;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    transition:
+        background 0.15s ease,
+        transform 0.1s ease;
+}
+
+.search-btn:hover {
+    background: #f3a847;
+}
+
+.search-btn:active {
+    background: #e69b35;
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   SEARCH SUGGESTIONS
+========================================================= */
+
+.search-suggestions {
+    position: absolute;
+
+    top: 48px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    background: white;
+
+    color: #111;
+
+    border: 1px solid #ccc;
+
+    border-top: none;
+
+    border-radius: 0 0 7px 7px;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.22);
+
+    z-index: 99999;
+
+    display: none;
+
+    max-height: 350px;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SINGLE SUGGESTION
+========================================================= */
+
+.search-suggestion {
+    min-height: 66px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 14px;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid #eee;
+
+    background: white;
+
+    transition: background 0.12s ease;
+}
+
+.search-suggestion:last-child {
+    border-bottom: none;
+}
+
+.search-suggestion:hover {
+    background: #f3f3f3;
+}
+
+
+/* =========================================================
+   SUGGESTION IMAGE
+========================================================= */
+
+.search-suggestion img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   SUGGESTION INFO
+========================================================= */
+
+.search-suggestion-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+}
+
+
+/* PRODUCT NAME */
+
+.search-suggestion-name {
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color: #111;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* PRODUCT PRICE */
+
+.search-suggestion-price {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #b12704;
+}
+
+
+/* NO RESULT */
+
+.no-search-result {
+    padding: 16px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    background: white;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+.nav-language {
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 0 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: white;
+
+    border: 1px solid transparent;
+    border-radius: 2px;
+
+    flex-shrink: 0;
+}
+
+.nav-language:hover {
+    border-color: white;
+}
+
+.india-flag {
+    font-size: 21px;
+}
+
+.language-arrow {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   ACCOUNT & LISTS
+========================================================= */
+
+.nav-account {
+    height: 60px;
+
+    min-width: 145px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 5px 10px;
+
+    cursor: pointer;
+
+    color: white !important;
+    text-decoration: none !important;
+
+    border: 1px solid transparent;
+    border-radius: 2px;
+
+    flex-shrink: 0;
+
+    transition: border-color 0.15s ease;
+}
+
+.nav-account:hover {
+    border-color: white;
+}
+
+.account-small {
+    display: block;
+
+    font-size: 13px;
+    line-height: 16px;
+
+    color: white !important;
+}
+
+.account-main {
+    display: block;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    font-weight: bold;
+
+    color: white !important;
+
+    white-space: nowrap;
+}
+
+.nav-arrow {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+
+/* =========================================================
+   RETURNS & ORDERS
+========================================================= */
+
+.nav-orders {
+    height: 60px;
+
+    min-width: 145px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 5px 10px;
+
+    cursor: pointer;
+
+    color: white !important;
+    text-decoration: none !important;
+
+    border: 1px solid transparent;
+    border-radius: 2px;
+
+    flex-shrink: 0;
+
+    transition: border-color 0.15s ease;
+}
+
+.nav-orders:hover {
+    border-color: white;
+}
+
+.orders-small {
+    display: block;
+
+    font-size: 13px;
+
+    color: white !important;
+}
+
+.orders-main {
+    display: block;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: white !important;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+.nav-cart {
+    height: 60px;
+
+    min-width: 95px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    cursor: pointer;
+
+    padding: 0 8px;
+
+    color: white !important;
+    text-decoration: none !important;
+
+    border: 1px solid transparent;
+    border-radius: 2px;
+
+    flex-shrink: 0;
+
+    transition: border-color 0.15s ease;
+}
+
+.nav-cart:hover {
+    border-color: white;
+}
+
+
+/* CART ICON */
+
+.cart-icon {
+    font-size: 32px;
+
+    color: white !important;
+
+    line-height: 1;
+}
+
+
+/* CART COUNT */
+
+.cart-count {
+    color: #f08804 !important;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    align-self: flex-start;
+
+    margin-top: 5px;
+}
+
+
+/* CART TEXT */
+
+.cart-text {
+    color: white !important;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    align-self: center;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1250px) {
+
+    .nav-location {
+        min-width: 200px;
+    }
+
+    .nav-account {
+        min-width: 125px;
+    }
+
+    .nav-orders {
+        min-width: 125px;
+    }
+
+    .nav-language {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL LAPTOP / TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .nav-location {
+        min-width: 170px;
+    }
+
+    .nav-account {
+        min-width: 110px;
+    }
+
+    .nav-orders {
+        min-width: 110px;
+    }
+
+    .account-main,
+    .orders-main {
+        font-size: 14px;
+    }
+
+    .search-input {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+        min-height: 68px;
+
+        flex-wrap: wrap;
+
+        padding: 5px;
+
+        gap: 4px;
+    }
+
+
+    .nav-logo {
+        width: 150px;
+        height: 55px;
+    }
+
+    .nav-logo img {
+        width: 140px;
+    }
+
+
+    .nav-location {
+        display: none;
+    }
+
+
+    .nav-search {
+        order: 5;
+
+        flex-basis: 100%;
+
+        width: 100%;
+        max-width: none;
+
+        margin: 5px 0 2px;
+
+        height: 46px;
+    }
+
+    .search-wrapper {
+        height: 46px;
+    }
+
+    .search-input {
+        height: 46px;
+        font-size: 16px;
+    }
+
+    .search-btn {
+        height: 46px;
+    }
+
+    .search-suggestions {
+        top: 46px;
+    }
+
+
+    .nav-account,
+    .nav-orders {
+        min-width: auto;
+
+        height: 55px;
+
+        padding: 4px 6px;
+    }
+
+
+    .nav-cart {
+        min-width: 80px;
+
+        height: 55px;
+
+        padding: 0 5px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .navbar {
+        gap: 3px;
+    }
+
+
+    .nav-logo {
+        width: 115px;
+        height: 52px;
+    }
+
+    .nav-logo img {
+        width: 108px;
+    }
+
+
+    .nav-account {
+        min-width: 88px;
+        padding: 4px;
+    }
+
+    .nav-orders {
+        min-width: 82px;
+        padding: 4px;
+    }
+
+
+    .account-small,
+    .orders-small {
+        font-size: 10px;
+    }
+
+
+    .account-main,
+    .orders-main {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+
+    .nav-arrow {
+        font-size: 8px;
+    }
+
+
+    .nav-cart {
+        min-width: 65px;
+
+        padding: 0 3px;
+    }
+
+
+    .cart-icon {
+        font-size: 25px;
+    }
+
+
+    .cart-count {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+
+    .cart-text {
+        font-size: 13px;
+    }
+
+
+    .search-category {
+        width: 62px;
+        padding: 0 5px;
+        font-size: 13px;
+    }
+
+
+    .search-input {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+
+    .search-btn {
+        width: 55px;
+        font-size: 21px;
+    }
+
+
+    .search-suggestion {
+        padding: 9px 10px;
+    }
+
+
+    .search-suggestion img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .search-suggestion-name {
+        font-size: 14px;
+    }
+
+
+    .search-suggestion-price {
+        font-size: 13px;
+    }
+
+}
